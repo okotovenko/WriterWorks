@@ -1655,6 +1655,10 @@ body::after {
     padding-right: 1.25rem;
   }
 
+  .two__center {
+    padding-bottom: 2.3125rem;
+  }
+
   .two__center h3 {
     font-size: 2rem;
   }
@@ -2055,6 +2059,10 @@ body::after {
     padding-right: 0.625rem;
   }
 
+  .two__center {
+    padding-bottom: 1.25rem;
+  }
+
   .two__center h3 {
     font-size: 1.25rem;
   }
@@ -2241,6 +2249,22 @@ body::after {
 @media (max-width: 61.99875em) {
   .hero__meta {
     right: 0.625rem;
+  }
+
+  .two__center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -2435,7 +2459,16 @@ body::after {
   }
 
   .two__center {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     max-width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 100%;
   }
 
   .two__image {
@@ -3205,6 +3238,18 @@ body::after {
 @supports not (padding-right: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem )) {
     .two__center {
       padding-right: calc(0.625rem + 0.625*(100vw - 20rem)/70.625);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , 0.9491150442rem  +  1.5044247788vw , 2.3125rem )) {
+    .two__center {
+      padding-bottom: clamp( 1.25rem , 0.9491150442rem  +  1.5044247788vw , 2.3125rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , 0.9491150442rem  +  1.5044247788vw , 2.3125rem )) {
+    .two__center {
+      padding-bottom: calc(1.25rem + 1.0625*(100vw - 20rem)/70.625);
     }
 }
 
