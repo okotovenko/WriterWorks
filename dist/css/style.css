@@ -267,7 +267,7 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background-color: #efffc2;
+  background-color: #ffb258;
   border-radius: 100px;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -833,7 +833,7 @@ body::after {
 }
 
 .hero__meta h3 {
-  font-weight: 600;
+  font-weight: 800;
   line-height: 100%;
   color: #272834;
 }
@@ -946,7 +946,7 @@ body::after {
   bottom: 1.25rem;
   left: 1.25rem;
   z-index: 2;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 100%;
   color: #fcfcfc;
   text-align: left;
@@ -1000,7 +1000,7 @@ body::after {
 }
 
 .two__right h3 {
-  font-weight: 600;
+  font-weight: 800;
   line-height: 100%;
   color: #272834;
   text-align: left;
@@ -1848,6 +1848,12 @@ body::after {
   }
 }
 
+@media (max-width: 25em) {
+  .hero__top p {
+    font-size: 0.5625rem;
+  }
+}
+
 @media (max-width: 20em) {
   .popup form {
     gap: 0.625rem;
@@ -2028,7 +2034,7 @@ body::after {
   }
 
   .two {
-    padding-top: 5rem;
+    padding-top: 4.0625rem;
   }
 
   .two {
@@ -2376,6 +2382,19 @@ body::after {
     padding-right: 0.9375rem;
   }
 
+  .hero__container>p {
+    font-weight: 700;
+    font-size: 0.75rem;
+    position: relative;
+    padding-left: 0;
+    width: 100%;
+    max-width: 8.125rem;
+  }
+
+  .hero__container>p span {
+    display: inline-block;
+  }
+
   .hero__logo {
     top: 0.625rem;
   }
@@ -2386,9 +2405,8 @@ body::after {
   }
 
   .hero__top p {
-    font-size: 0.75rem;
-    max-width: 6.5625rem;
-    padding-left: 0.625rem;
+    font-size: 0.6875rem;
+    max-width: 10rem;
   }
 
   .hero__top a::before {
@@ -2400,10 +2418,18 @@ body::after {
     height: 1.875rem;
   }
 
+  .hero__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-left: 0.625rem;
+  }
+
   .hero__text {
     font-size: 1.375rem;
-    position: relative;
     padding-left: 0;
+    position: relative;
   }
 
   .hero__text span {
@@ -2578,13 +2604,6 @@ body::after {
 }
 
 @media (max-width: 40.625em) {
-  .hero__top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-
   .hero__button {
     top: 85%;
     left: 30%;
@@ -2597,12 +2616,24 @@ body::after {
 }
 
 @media (max-width: 31.25em) {
+  .hero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .hero__contacts {
     top: 21%;
   }
 
   .hero__svg {
     clip-path: url("#mask3");
+    aspect-ratio: 290/355;
+    max-height: 400px;
   }
 
   .hero__bg {
@@ -2614,25 +2645,29 @@ body::after {
   }
 
   .hero__top {
-    top: 72%;
+    top: 90%;
     gap: 0.9375rem;
     padding-left: 0;
+    width: 30%;
+  }
+
+  .hero__text {
+    position: relative;
+    padding-top: 1.4375rem;
+    padding-bottom: 1.3125rem;
   }
 
   .hero__button {
-    top: 92%;
-    left: 5%;
+    position: relative;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    top: 0;
+    left: 0;
   }
 
   .three__button {
     top: 92%;
     left: 5%;
-  }
-}
-
-@media (max-width: 21.875em) {
-  .hero__top {
-    top: 70%;
   }
 }
 
@@ -3145,15 +3180,15 @@ body::after {
     }
 }
 
-@supports (padding-top: clamp( 5rem , 3.7610619469rem  +  6.1946902655vw , 9.375rem )) {
+@supports (padding-top: clamp( 4.0625rem , 2.5580752212rem  +  7.5221238938vw , 9.375rem )) {
     .two {
-      padding-top: clamp( 5rem , 3.7610619469rem  +  6.1946902655vw , 9.375rem );
+      padding-top: clamp( 4.0625rem , 2.5580752212rem  +  7.5221238938vw , 9.375rem );
     }
 }
 
-@supports not (padding-top: clamp( 5rem , 3.7610619469rem  +  6.1946902655vw , 9.375rem )) {
+@supports not (padding-top: clamp( 4.0625rem , 2.5580752212rem  +  7.5221238938vw , 9.375rem )) {
     .two {
-      padding-top: calc(5rem + 4.375*(100vw - 20rem)/70.625);
+      padding-top: calc(4.0625rem + 5.3125*(100vw - 20rem)/70.625);
     }
 }
 
