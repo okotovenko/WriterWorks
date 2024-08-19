@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240819164624">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css?_v=20240819164624">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240819170807">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css?_v=20240819170807">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Open Graph -->
@@ -50,7 +50,6 @@
 						</div>
 						<div class="hero__top">
 							<p> Залишай заявку і ми з Тобою зв’яжемось</p>
-							<!-- <a href="404.html" class="_icon-arrow-up-left"></a> -->
 							<a href="#" data-popup="#popup" class="hero__button _icon-arrow-up-left">Отримати допомогу</a>
 						</div>
 					</div>
@@ -179,7 +178,8 @@
 						</p>
 						<div class="three__bottom">
 							<h3>звертайся ПРОСТО ЗАРАЗ</h3>
-							<a href="#" data-popup="#popup" class="three__button _icon-arrow-up-left">Отримати консультацію</a>
+							<a href="404.html" class="three__button _icon-arrow-up-left">Отримати
+								консультацію</a>
 						</div>
 					</div>
 				</div>
@@ -202,7 +202,7 @@
 				<div class="popup__text">
 					<h2>ЗАЛИШАЙ ЗАЯВКУ НА ДОПОМОГУ</h2>
 					<h3>Відповімо тобі протягом 15 хвилин</h3>
-					<form action="https://systemcrm.writer-works.net/mail" class="form" method="GET">
+					<form action="https://systemcrm.writer-works.net/mail" data-dev class="form" method="GET">
 						<input type="hidden" name="form_subject" value="Тема листа">
 						<label class="form-label">
 							<input type="text" data-required name="name" id="name" autocomplete="off" maxlength="255" data-error="Error" class="input" placeholder="Ім’я">
@@ -216,8 +216,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240819164624"></script>
-	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/intlTelInput.min.js?_v=20240819164624"></script>
+	<script src="js/app.min.js?_v=20240819170807"></script>
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/intlTelInput.min.js?_v=20240819170807"></script>
 	<script>
 		const input = document.querySelector("#tel");
 		if (input) {

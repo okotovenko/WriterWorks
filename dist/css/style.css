@@ -1212,6 +1212,14 @@ body::after {
   position: relative;
 }
 
+.success .hero__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 1.5625rem;
+}
+
 .success .three__decor-03,
 .success .three__decor-04 {
   display: none;
@@ -1330,6 +1338,14 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.forty .hero__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 1.5625rem;
 }
 
 .forty__container {
