@@ -605,21 +605,24 @@ body::after {
 
 .hero {
   padding-top: 2.1875rem;
-  padding-bottom: 0.9375rem;
 }
 
 .hero__container {
   height: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hero__logo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 1.25rem;
-  margin: 0 auto;
-  z-index: 2;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 1.25rem;
 }
 
 .hero__contacts {
@@ -634,7 +637,7 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.625rem;
+  gap: 1.5rem;
 }
 
 .hero__contacts a {
@@ -670,8 +673,7 @@ body::after {
 .hero__svg {
   clip-path: url("#mask1");
   width: 100%;
-  max-height: 736px;
-  max-height: 100%;
+  max-height: 524px;
   max-width: 1350px;
   position: relative;
   z-index: 1;
@@ -697,17 +699,29 @@ body::after {
   display: none;
 }
 
+.hero__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.4375rem;
+}
+
 .hero__top {
   position: absolute;
-  left: 0;
-  top: 59%;
-  padding-left: 1.25rem;
+  right: 0;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1.5rem;
 }
 
 .hero__top p {
@@ -717,35 +731,9 @@ body::after {
   width: 100%;
 }
 
-.hero__top a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 50%;
-  border: 1px solid #000;
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
-}
-
-.hero__top a::before {
-  font-size: 1.5rem;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
-}
-
 .hero__text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  width: 100%;
+  max-width: 70%;
   padding-left: 1.25rem;
   font-weight: 700;
   line-height: 120%;
@@ -754,15 +742,7 @@ body::after {
   color: #272834;
 }
 
-.hero__text span {
-  display: block;
-}
-
 .hero__button {
-  position: absolute;
-  z-index: 2;
-  left: 37%;
-  top: 70%;
   background-color: #ffb258;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -810,7 +790,7 @@ body::after {
 }
 
 .hero__button:active {
-  background: #fcfcfc;
+  background: #e4d6ff;
   -webkit-transition: all .3s ease 0s;
   transition: all .3s ease 0s;
 }
@@ -883,11 +863,37 @@ body::after {
   max-width: 85%;
 }
 
+.two__container {
+  position: relative;
+}
+
 .two__container h2 {
   font-weight: 700;
   line-height: 100%;
   color: #272834;
   text-align: left;
+}
+
+.two__decor-01 {
+  position: absolute;
+  left: -6%;
+  top: 33%;
+  -webkit-transform: rotate(-72deg);
+      -ms-transform: rotate(-72deg);
+          transform: rotate(-72deg);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.two__decor-02 {
+  position: absolute;
+  left: -18%;
+  bottom: -13%;
+  -webkit-transform: rotate(-72deg);
+      -ms-transform: rotate(-72deg);
+          transform: rotate(-72deg);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .two__content {
@@ -907,74 +913,50 @@ body::after {
   text-align: left;
   line-height: 117%;
   color: #272834;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 1.25rem;
 }
 
 .two__center {
-  clip-path: url("#mask4");
   width: 100%;
   height: auto;
   max-width: 30.75rem;
   position: relative;
   background-color: #e4d6ff;
-}
-
-.two__center>svg {
-  width: 100%;
-  height: 100%;
+  border-radius: 1.5625rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  position: relative;
 }
 
 .two__center>img,
 .two__center>picture {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 28.25rem;
+  border-radius: 1.5625rem;
+  aspect-ratio: 452/214;
 }
 
 .two__center picture source,
 .two__center picture img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 28.25rem;
+  border-radius: 1.5625rem;
+  aspect-ratio: 452/214;
 }
 
 .two__center h3 {
-  position: absolute;
-  bottom: 1.25rem;
-  left: 1.25rem;
   z-index: 2;
   font-weight: 800;
   line-height: 100%;
-  color: #fcfcfc;
+  color: #272834;
   text-align: left;
-}
-
-.two__image {
-  clip-path: url("#mask5");
-  z-index: 2;
-  width: 100%;
-  max-width: 28.25rem;
-  height: auto;
-  position: relative;
-}
-
-.two__image>img,
-.two__image>picture {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.two__image picture source,
-.two__image picture img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .two__box p {
@@ -997,6 +979,7 @@ body::after {
   background-color: #efffc2;
   border-radius: 1.5625rem;
   overflow: hidden;
+  margin-top: 7%;
 }
 
 .two__right h3 {
@@ -1013,7 +996,7 @@ body::after {
      object-fit: cover;
   max-width: 28.25rem;
   border-radius: 1.5625rem;
-  aspect-ratio: 452/162;
+  aspect-ratio: 452/214;
 }
 
 .two__right picture source,
@@ -1023,7 +1006,7 @@ body::after {
      object-fit: cover;
   max-width: 28.25rem;
   border-radius: 1.5625rem;
-  aspect-ratio: 452/162;
+  aspect-ratio: 452/214;
 }
 
 .three__box {
@@ -1403,14 +1386,6 @@ body::after {
     max-width: 13.75rem;
   }
 
-  .hero__top a {
-    width: 3.75rem;
-  }
-
-  .hero__top a {
-    height: 3.75rem;
-  }
-
   .hero__text {
     font-size: 2.875rem;
   }
@@ -1624,19 +1599,31 @@ body::after {
   }
 
   .two {
-    padding-top: 9.375rem;
+    padding-top: 5.3125rem;
   }
 
   .two {
-    padding-bottom: 9.375rem;
+    padding-bottom: 3.375rem;
   }
 
   .two__container h2 {
     font-size: 2.875rem;
   }
 
-  .two__container h2 {
-    margin-bottom: 2.1875rem;
+  .two__decor-01 {
+    width: 11.4375rem;
+  }
+
+  .two__decor-01 {
+    height: 11.4375rem;
+  }
+
+  .two__decor-02 {
+    width: 11.4375rem;
+  }
+
+  .two__decor-02 {
+    height: 11.4375rem;
   }
 
   .two__left {
@@ -1644,7 +1631,7 @@ body::after {
   }
 
   .two__center {
-    padding-top: 1.25rem;
+    padding-top: 1.875rem;
   }
 
   .two__center {
@@ -1661,6 +1648,10 @@ body::after {
 
   .two__center h3 {
     font-size: 2rem;
+  }
+
+  .two__center h3 {
+    margin-bottom: 0.9375rem;
   }
 
   .two__box {
@@ -1836,9 +1827,9 @@ body::after {
   }
 }
 
-@media (min-width: 90em) {
-  .hero__top {
-    gap: 2.5rem;
+@media (min-width: 120em) {
+  .two__container h2 {
+    margin-bottom: 2.1875rem;
   }
 }
 
@@ -2034,7 +2025,7 @@ body::after {
   }
 
   .two {
-    padding-top: 4.0625rem;
+    padding-top: 5rem;
   }
 
   .two {
@@ -2045,8 +2036,20 @@ body::after {
     font-size: 1.25rem;
   }
 
-  .two__container h2 {
-    margin-bottom: 1.25rem;
+  .two__decor-01 {
+    width: 5.625rem;
+  }
+
+  .two__decor-01 {
+    height: 5.625rem;
+  }
+
+  .two__decor-02 {
+    width: 5.625rem;
+  }
+
+  .two__decor-02 {
+    height: 5.625rem;
   }
 
   .two__left {
@@ -2071,6 +2074,10 @@ body::after {
 
   .two__center h3 {
     font-size: 1.25rem;
+  }
+
+  .two__center h3 {
+    margin-bottom: 0.625rem;
   }
 
   .two__box {
@@ -2246,31 +2253,9 @@ body::after {
   }
 }
 
-@media (max-width: 81.25em) {
-  .hero__top {
-    gap: 0.625rem;
-  }
-}
-
 @media (max-width: 61.99875em) {
   .hero__meta {
     right: 0.625rem;
-  }
-
-  .two__center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
 }
 
@@ -2395,8 +2380,20 @@ body::after {
     display: inline-block;
   }
 
+  .hero__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
   .hero__logo {
     top: 0.625rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
   }
 
   .hero__contacts {
@@ -2404,26 +2401,27 @@ body::after {
     top: 15%;
   }
 
+  .hero__block {
+    padding: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .hero__top p {
     font-size: 0.6875rem;
     max-width: 10rem;
   }
 
-  .hero__top a::before {
-    font-size: 0.75rem;
-  }
-
-  .hero__top a {
-    width: 1.875rem;
-    height: 1.875rem;
-  }
-
   .hero__top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    padding-left: 0.625rem;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .hero__text {
@@ -2432,8 +2430,11 @@ body::after {
     position: relative;
   }
 
-  .hero__text span {
-    display: inline-block;
+  .hero__text {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 1.5625rem;
+    max-width: 100%;
   }
 
   .hero__button {
@@ -2465,6 +2466,15 @@ body::after {
   .two__container {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+    margin-bottom: 0;
+  }
+
+  .two__decor-01 {
+    display: none;
+  }
+
+  .two__decor-02 {
+    display: none;
   }
 
   .two__content {
@@ -2475,8 +2485,17 @@ body::after {
   }
 
   .two__left {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    margin-bottom: 1.5625rem;
+  }
+
+  .two__center>img,
+  .two__center>picture {
+    max-width: 100%;
+  }
+
+  .two__center picture source,
+  .two__center picture img {
+    max-width: 100%;
   }
 
   .two__center h3 {
@@ -2485,19 +2504,6 @@ body::after {
   }
 
   .two__center {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    max-width: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    height: 100%;
-  }
-
-  .two__image {
     max-width: 100%;
   }
 
@@ -2616,18 +2622,9 @@ body::after {
 }
 
 @media (max-width: 31.25em) {
-  .hero__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .hero__contacts {
     top: 21%;
+    gap: 0.625rem;
   }
 
   .hero__svg {
@@ -2642,19 +2639,6 @@ body::after {
 
   .hero__bg-mob {
     display: block;
-  }
-
-  .hero__top {
-    top: 90%;
-    gap: 0.9375rem;
-    padding-left: 0;
-    width: 30%;
-  }
-
-  .hero__text {
-    position: relative;
-    padding-top: 1.4375rem;
-    padding-bottom: 1.3125rem;
   }
 
   .hero__button {
@@ -3180,27 +3164,27 @@ body::after {
     }
 }
 
-@supports (padding-top: clamp( 4.0625rem , 2.5580752212rem  +  7.5221238938vw , 9.375rem )) {
+@supports (padding-top: clamp( 5rem , 4.9115044248rem  +  0.4424778761vw , 5.3125rem )) {
     .two {
-      padding-top: clamp( 4.0625rem , 2.5580752212rem  +  7.5221238938vw , 9.375rem );
+      padding-top: clamp( 5rem , 4.9115044248rem  +  0.4424778761vw , 5.3125rem );
     }
 }
 
-@supports not (padding-top: clamp( 4.0625rem , 2.5580752212rem  +  7.5221238938vw , 9.375rem )) {
+@supports not (padding-top: clamp( 5rem , 4.9115044248rem  +  0.4424778761vw , 5.3125rem )) {
     .two {
-      padding-top: calc(4.0625rem + 5.3125*(100vw - 20rem)/70.625);
+      padding-top: calc(5rem + 0.3125*(100vw - 20rem)/70.625);
     }
 }
 
-@supports (padding-bottom: clamp( 5rem , 3.7610619469rem  +  6.1946902655vw , 9.375rem )) {
+@supports (padding-bottom: clamp( 3.375rem , 5.4601769912rem  +  -2.3008849558vw , 5rem )) {
     .two {
-      padding-bottom: clamp( 5rem , 3.7610619469rem  +  6.1946902655vw , 9.375rem );
+      padding-bottom: clamp( 3.375rem , 5.4601769912rem  +  -2.3008849558vw , 5rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 5rem , 3.7610619469rem  +  6.1946902655vw , 9.375rem )) {
+@supports not (padding-bottom: clamp( 3.375rem , 5.4601769912rem  +  -2.3008849558vw , 5rem )) {
     .two {
-      padding-bottom: calc(5rem + 4.375*(100vw - 20rem)/70.625);
+      padding-bottom: calc(5rem + -1.625*(100vw - 20rem)/70.625);
     }
 }
 
@@ -3216,15 +3200,51 @@ body::after {
     }
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 0.9845132743rem  +  1.3274336283vw , 2.1875rem )) {
-    .two__container h2 {
-      margin-bottom: clamp( 1.25rem , 0.9845132743rem  +  1.3274336283vw , 2.1875rem );
+@supports (width: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-01 {
+      width: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 0.9845132743rem  +  1.3274336283vw , 2.1875rem )) {
-    .two__container h2 {
-      margin-bottom: calc(1.25rem + 0.9375*(100vw - 20rem)/70.625);
+@supports not (width: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-01 {
+      width: calc(5.625rem + 5.8125*(100vw - 20rem)/70.625);
+    }
+}
+
+@supports (height: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-01 {
+      height: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem );
+    }
+}
+
+@supports not (height: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-01 {
+      height: calc(5.625rem + 5.8125*(100vw - 20rem)/70.625);
+    }
+}
+
+@supports (width: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-02 {
+      width: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem );
+    }
+}
+
+@supports not (width: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-02 {
+      width: calc(5.625rem + 5.8125*(100vw - 20rem)/70.625);
+    }
+}
+
+@supports (height: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-02 {
+      height: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem );
+    }
+}
+
+@supports not (height: clamp( 5.625rem , 3.9789823009rem  +  8.2300884956vw , 11.4375rem )) {
+    .two__decor-02 {
+      height: calc(5.625rem + 5.8125*(100vw - 20rem)/70.625);
     }
 }
 
@@ -3240,15 +3260,15 @@ body::after {
     }
 }
 
-@supports (padding-top: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem )) {
+@supports (padding-top: clamp( 0.625rem , 0.2710176991rem  +  1.7699115044vw , 1.875rem )) {
     .two__center {
-      padding-top: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem );
+      padding-top: clamp( 0.625rem , 0.2710176991rem  +  1.7699115044vw , 1.875rem );
     }
 }
 
-@supports not (padding-top: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem )) {
+@supports not (padding-top: clamp( 0.625rem , 0.2710176991rem  +  1.7699115044vw , 1.875rem )) {
     .two__center {
-      padding-top: calc(0.625rem + 0.625*(100vw - 20rem)/70.625);
+      padding-top: calc(0.625rem + 1.25*(100vw - 20rem)/70.625);
     }
 }
 
@@ -3297,6 +3317,18 @@ body::after {
 @supports not (font-size: clamp( 1.25rem , 1.0376106195rem  +  1.0619469027vw , 2rem )) {
     .two__center h3 {
       font-size: calc(1.25rem + 0.75*(100vw - 20rem)/70.625);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.625rem , 0.5365044248rem  +  0.4424778761vw , 0.9375rem )) {
+    .two__center h3 {
+      margin-bottom: clamp( 0.625rem , 0.5365044248rem  +  0.4424778761vw , 0.9375rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.625rem , 0.5365044248rem  +  0.4424778761vw , 0.9375rem )) {
+    .two__center h3 {
+      margin-bottom: calc(0.625rem + 0.3125*(100vw - 20rem)/70.625);
     }
 }
 
@@ -3817,20 +3849,6 @@ body::after {
 }
 }
 
-@media (min-width: 81.25em)and (max-width: 90em) {
-@supports (gap: clamp( 0.625rem , -16.7857142857rem  +  21.4285714286vw , 2.5rem )) {
-    .hero__top {
-      gap: clamp( 0.625rem , -16.7857142857rem  +  21.4285714286vw , 2.5rem );
-    }
-}
-
-@supports not (gap: clamp( 0.625rem , -16.7857142857rem  +  21.4285714286vw , 2.5rem )) {
-    .hero__top {
-      gap: calc(0.625rem + 1.875*(100vw - 81.25rem)/8.75);
-    }
-}
-}
-
 @media (min-width: 48em)and (max-width: 87.5em) {
 @supports (font-size: clamp( 0.75rem , 0.1424050633rem  +  1.2658227848vw , 1.25rem )) {
     .hero__top p {
@@ -3853,30 +3871,6 @@ body::after {
 @supports not (max-width: clamp( 7.5rem , -0.0949367089rem  +  15.8227848101vw , 13.75rem )) {
     .hero__top p {
       max-width: calc(7.5rem + 6.25*(100vw - 48rem)/39.5);
-    }
-}
-
-@supports (width: clamp( 1.875rem , -0.4034810127rem  +  4.746835443vw , 3.75rem )) {
-    .hero__top a {
-      width: clamp( 1.875rem , -0.4034810127rem  +  4.746835443vw , 3.75rem );
-    }
-}
-
-@supports not (width: clamp( 1.875rem , -0.4034810127rem  +  4.746835443vw , 3.75rem )) {
-    .hero__top a {
-      width: calc(1.875rem + 1.875*(100vw - 48rem)/39.5);
-    }
-}
-
-@supports (height: clamp( 1.875rem , -0.4034810127rem  +  4.746835443vw , 3.75rem )) {
-    .hero__top a {
-      height: clamp( 1.875rem , -0.4034810127rem  +  4.746835443vw , 3.75rem );
-    }
-}
-
-@supports not (height: clamp( 1.875rem , -0.4034810127rem  +  4.746835443vw , 3.75rem )) {
-    .hero__top a {
-      height: calc(1.875rem + 1.875*(100vw - 48rem)/39.5);
     }
 }
 
@@ -3977,6 +3971,20 @@ body::after {
 }
 }
 
+@media (min-width: 48em)and (max-width: 120em) {
+@supports (margin-bottom: clamp( 1.25rem , 0.625rem  +  1.3020833333vw , 2.1875rem )) {
+    .two__container h2 {
+      margin-bottom: clamp( 1.25rem , 0.625rem  +  1.3020833333vw , 2.1875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.625rem  +  1.3020833333vw , 2.1875rem )) {
+    .two__container h2 {
+      margin-bottom: calc(1.25rem + 0.9375*(100vw - 48rem)/72);
+    }
+}
+}
+
 @media (any-hover: hover) {
   .popup form button[type=submit]:hover,
   .popup form input[type=submit]:hover {
@@ -4014,22 +4022,8 @@ body::after {
     transition: all .3s ease 0s;
   }
 
-  .hero__top a:hover {
-    background: #ffb258;
-    -webkit-transition: all .3s ease 0s;
-    transition: all .3s ease 0s;
-  }
-
-  .hero__top a:hover::before {
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-    -webkit-transition: all .3s ease 0s;
-    transition: all .3s ease 0s;
-  }
-
   .hero__button:hover {
-    background: #fcfcfc;
+    background: #e4d6ff;
     -webkit-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
   }

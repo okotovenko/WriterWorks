@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240816130213">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css?_v=20240816130213">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240819151320">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/css/intlTelInput.css?_v=20240819151320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Open Graph -->
@@ -42,20 +42,23 @@
 			<section class="page__hero hero">
 				<div class="hero__container">
 					<img class="hero__logo" src="img/logo.svg" alt="logo">
-					<div class="hero__contacts">
-						<a href="error.html" class="hero__tg _icon-Vector-27"></a>
-						<a href="success.html" class="hero__insta _icon-Instagram"></a>
-					</div>
-					<div class="hero__box">
-						<div class="hero__top">
-							<p data-da=".hero__container,500,9"> Залишай заявку і ми з Тобою зв’яжемось</p>
-							<a href="404.html" class="_icon-arrow-up-left"></a>
-						</div>
-						<div data-da=".hero__container,768,7" class="hero__text">
-							<p><span>НЕ ВДАЄТЬСЯ <br> САМОСТІЙНО</span> ОПАНУВАТИ НАВЧАЛЬНИЙ МАТЕРІАЛ? <br> МИ ДОПОМОЖЕМО ВАМ!
+					<div class="hero__block">
+						<div class="hero__text">
+							<p>НЕ ВДАЄТЬСЯ САМОСТІЙНО ОПАНУВАТИ НАВЧАЛЬНИЙ МАТЕРІАЛ? МИ ДОПОМОЖЕМО
+								ТОБІ!
 							</p>
 						</div>
-						<a href="#" data-popup="#popup" data-da=".hero__container,500,7" class="hero__button _icon-arrow-up-left">Отримати допомогу</a>
+						<div class="hero__top">
+							<p> Залишай заявку і ми з Тобою зв’яжемось</p>
+							<!-- <a href="404.html" class="_icon-arrow-up-left"></a> -->
+							<a href="#" data-popup="#popup" class="hero__button _icon-arrow-up-left">Отримати допомогу</a>
+						</div>
+					</div>
+					<div class="hero__box">
+						<div class="hero__contacts">
+							<a href="error.html" class="hero__tg _icon-Vector-27"></a>
+							<a href="success.html" class="hero__insta _icon-Instagram"></a>
+						</div>
 						<div class=" hero__meta">
 							<picture><source srcset="img/Exclude.webp" type="image/webp"><img src="img/Exclude.png" alt="bg"></picture>
 							<div class="hero__content">
@@ -71,10 +74,18 @@
 							<picture><source srcset="img/bg-mob.webp" type="image/webp"><img class="hero__bg-mob" src="img/bg-mob.png" alt="bg"></picture>
 						</div>
 					</div>
+					<!-- <svg width="0" height="0">
+						<defs>
+							<clipPath id="mask1" clipPathUnits="objectBoundingBox">
+								<path id="k" fill-rule="evenodd" clip-rule="evenodd"
+									d="M1 0.0408C1 0.0182 0.9893 0 0.9778 0H0.0222C0.0100 0 0 0.0182 0 0.0408V0.5285C0 0.5514 0.0100 0.5693 0.0222 0.5693H0.2511C0.2637 0.5693 0.2733 0.5870 0.2733 0.6106V0.6576C0.2733 0.6804 0.2837 0.6982 0.2963 0.6982H0.3311C0.3437 0.6982 0.3533 0.7158 0.3533 0.7391V0.7861C0.3533 0.8089 0.3637 0.8266 0.3763 0.8266H0.6481C0.6607 0.8266 0.6703 0.8444 0.6703 0.8674V0.9592C0.6703 0.9821 0.6807 1 0.6933 1H0.9778C0.9904 1 1 0.9821 1 0.9592V0.8266V0.8234V0.6982V0.5693V0.0408Z" />
+							</clipPath>
+						</defs>
+					</svg> -->
 					<svg width="0" height="0">
 						<defs>
 							<clipPath id="mask1" clipPathUnits="objectBoundingBox">
-								<path id="k" fill-rule="evenodd" clip-rule="evenodd" d="M1 0.0408C1 0.0182 0.9893 0 0.9778 0H0.0222C0.0100 0 0 0.0182 0 0.0408V0.5285C0 0.5514 0.0100 0.5693 0.0222 0.5693H0.2511C0.2637 0.5693 0.2733 0.5870 0.2733 0.6106V0.6576C0.2733 0.6804 0.2837 0.6982 0.2963 0.6982H0.3311C0.3437 0.6982 0.3533 0.7158 0.3533 0.7391V0.7861C0.3533 0.8089 0.3637 0.8266 0.3763 0.8266H0.6481C0.6607 0.8266 0.6703 0.8444 0.6703 0.8674V0.9592C0.6703 0.9821 0.6807 1 0.6933 1H0.9778C0.9904 1 1 0.9821 1 0.9592V0.8266V0.8234V0.6982V0.5693V0.0408Z" />
+								<path id="k" fill-rule="evenodd" clip-rule="evenodd" d="M1 0.057 C1 0.026 0.990 0 0.978 0 H0.022 C0.010 0 0 0.026 0 0.057 V0.742 C0 0.774 0.010 0.799 0.022 0.799 H0.470 C0.483 0.799 0.493 0.825 0.493 0.857 V0.943 C0.493 0.974 0.502 1 0.515 1 H0.978 C0.990 1 1 0.974 1 0.943 V0.799 V0.797 V0.057 Z" />
 							</clipPath>
 						</defs>
 					</svg>
@@ -104,6 +115,7 @@
 			</section>
 			<section class="page__two two">
 				<div class="two__container">
+					<img class="two__decor-01" src="img/decor.svg" alt="decor">
 					<h2>З НАМИ ШВИДКО ТА <br> ЗРУЧНО ПРАЦЮВАТИ
 					</h2>
 					<div class="two__content">
@@ -113,10 +125,8 @@
 							</p>
 						</div>
 						<div class="two__center">
-							<div class="two__image">
-								<picture><source srcset="img/photo-1.webp" type="image/webp"><img src="img/photo-1.png" alt="img"></picture>
-								<h3>МИ НАДАЄМО <br> ГАРАНТІЇ</h3>
-							</div>
+							<h3>ГАРАНТУЄМО ВИСОКИЙ <br> РІВЕНЬ ПОСЛУГ</h3>
+							<picture><source srcset="img/photo-1.webp" type="image/webp"><img src="img/photo-1.png" alt="img"></picture>
 							<div class="two__box">
 								<p>Твій спокій та впевненість у результаті</p>
 								<ul>
@@ -124,11 +134,12 @@
 									<li>Можливість укладання договору</li>
 									<li>Безпечна оплата частинами від 25%</li>
 								</ul>
+								<img class="two__decor-02" src="img/decor.svg" alt="decor">
 							</div>
 
 						</div>
 						<div class="two__right">
-							<h3>МИ НАДАЄМО НАЙКРАЩУ ЯКІСТЬ</h3>
+							<h3>НАДАМО ТОБІ <br> НАЙКРАЩУ ЯКІСТЬ</h3>
 							<picture><source srcset="img/photo-2.webp" type="image/webp"><img src="img/photo-2.png" alt="img"></picture>
 							<div class="two__box">
 								<p>Підтримуємо на кожному етапі Твого завдання</p>
@@ -141,20 +152,22 @@
 							</div>
 						</div>
 					</div>
-					<svg width="0" height="0">
+					<!-- <svg width="0" height="0">
 						<defs>
 							<clipPath id="mask4" clipPathUnits="objectBoundingBox">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.057 C1 0.026 0.973 0 0.939 0 H0.297 C0.263 0 0.236 0.026 0.236 0.057 V0.138 C0.236 0.17 0.208 0.195 0.175 0.195 H0.061 C0.027 0.195 0 0.221 0 0.253 V0.942 C0 0.974 0.027 1 0.061 1 H0.939 C0.973 1 1 0.974 1 0.942 V0.057Z" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M1 0.057 C1 0.026 0.973 0 0.939 0 H0.297 C0.263 0 0.236 0.026 0.236 0.057 V0.138 C0.236 0.17 0.208 0.195 0.175 0.195 H0.061 C0.027 0.195 0 0.221 0 0.253 V0.942 C0 0.974 0.027 1 0.061 1 H0.939 C0.973 1 1 0.974 1 0.942 V0.057Z" />
 							</clipPath>
 						</defs>
 					</svg>
 					<svg width="0" height="0">
 						<defs>
 							<clipPath id="mask5" clipPathUnits="objectBoundingBox">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.136 C1 0.061 0.967 0 0.927 0 H0.33 C0.289 0 0.256 0.061 0.256 0.136 V0.295 C0.256 0.37 0.224 0.432 0.184 0.432 H0.073 C0.033 0.432 0 0.493 0 0.568 V0.863 C0 0.939 0.033 1 0.073 1 H0.927 C0.967 1 1 0.939 1 0.863 V0.136Z" />
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M1 0.136 C1 0.061 0.967 0 0.927 0 H0.33 C0.289 0 0.256 0.061 0.256 0.136 V0.295 C0.256 0.37 0.224 0.432 0.184 0.432 H0.073 C0.033 0.432 0 0.493 0 0.568 V0.863 C0 0.939 0.033 1 0.073 1 H0.927 C0.967 1 1 0.939 1 0.863 V0.136Z" />
 							</clipPath>
 						</defs>
-					</svg>
+					</svg> -->
 				</div>
 			</section>
 			<section class="page__three three">
@@ -203,8 +216,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240816130213"></script>
-	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/intlTelInput.min.js?_v=20240816130213"></script>
+	<script src="js/app.min.js?_v=20240819151320"></script>
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@22.0.2/build/js/intlTelInput.min.js?_v=20240819151320"></script>
 	<script>
 		const input = document.querySelector("#tel");
 		if (input) {
